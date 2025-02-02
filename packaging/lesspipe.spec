@@ -29,7 +29,6 @@ for archive contents are provided.
 
 %prep
 %setup -n lesspipe-%{packageversion}
-#%setup -n lesspipe
 
 %build
 
