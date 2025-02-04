@@ -6,13 +6,14 @@ Name:          %{packagename}
 Version:       %{packageversion}
 Release:       %{packagerelease}
 Group:         Languages
-Source0:       lesspipe-%{packageversion}.tar.gz
+Source0:       https://github.com/ahaupt/lesspipe/archive/refs/tags/v%{packageversion}.tar.gz
 BuildArch:     noarch
 AutoReqProv:   on
 Packager:      Wolfgang Friebel <wp.friebel@gmail.com>
 URL:           https://github.com/wofr06/lesspipe.sh/
 License:       GPL
 BuildRoot:     /var/tmp/%{packagename}-%{packageversion}
+BuildRequires: make perl
 Summary:       Input filter for less to better display files
 
 %description
@@ -27,8 +28,8 @@ works as well as a zsh script. For zsh and bash tab completion mechanisms
 for archive contents are provided.
 
 %prep
-#%setup -n lesspipe-%{packageversion}
-%setup -n lesspipe
+%setup -n lesspipe-%{packageversion}
+#%setup -n lesspipe
 
 %build
 
