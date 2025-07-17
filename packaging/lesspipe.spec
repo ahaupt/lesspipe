@@ -1,5 +1,5 @@
 %define packagename lesspipe
-%define packageversion 2.20
+%define packageversion 2.19
 %define packagerelease 1
 
 Name:          %{packagename}
@@ -96,6 +96,8 @@ cd $RPM_BUILD_DIR
 #%docdir %{prefix}/share/man/man1
 
 %changelog
+* Thu Jul 17 2025 2.19-1 - wp.friebel@gmail.com
+- installation and documentation enhancements, use ffprobe for videos
 * Sun Feb 16 2025 2.18-1 - wp.friebel@gmail.com
 - documentation enhanced, better xlsx support
 * Sun Dec 22 2024 2.17-1 - wp.friebel@gmail.com
