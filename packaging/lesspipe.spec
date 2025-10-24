@@ -13,7 +13,7 @@ Packager:      Wolfgang Friebel <wp.friebel@gmail.com>
 URL:           https://github.com/wofr06/lesspipe/
 License:       GPL
 BuildRoot:     /var/tmp/%{packagename}-%{packageversion}
-BuildRequires: make perl
+BuildRequires: make perl bash zsh
 Summary:       Input filter for less to better display files
 
 %description
@@ -36,7 +36,7 @@ for archive contents are provided.
 %define bindir %{prefix}/libexec/%{name}
 %define bash_completion %{_datarootdir}/bash-completion/completions
 %define zsh_completion %{_datarootdir}/zsh/site-functions
-./configure --prefix=%{prefix} --bindir=%{bindir} --bash-completion-dir=%{bash_completion} --zsh-completion-dir=%{zsh_completion} --all-completions
+./configure --prefix=%{prefix} --bindir=%{bindir} --bash-completion-dir=%{bash_completion} --zsh-completion-dir=%{zsh_completion}
 
 %install
 #
