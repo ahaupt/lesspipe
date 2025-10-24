@@ -38,7 +38,7 @@ my $bindir = $opt_bindir || $ENV{BINDIR} || "$prefix/bin";
 my $mandir = $opt_mandir || $ENV{MANDIR} || "$prefix/share/man/man1";
 my $bash_complete_dir = $opt_bash_completion_dir || "$prefix/share/bash-completion";
 # override prefix and use the system defined directory if known
-if (`pkg-config --version 2>/dev/null`) {
+if ( ! $opt_bash_completion_dir && `pkg-config --version 2>/dev/null`) {
 	$bash_complete_dir = `pkg-config --variable=completionsdir bash-completion`;
 	chomp $bash_complete_dir;
 }
