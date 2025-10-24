@@ -1,16 +1,16 @@
 %define packagename lesspipe
-%define packageversion 2.17
+%define packageversion 2.20
 %define packagerelease 1
 
 Name:          %{packagename}
 Version:       %{packageversion}
-Release:       %{packagerelease}
+Release:       %{packagerelease}%{?dist}
 Group:         Languages
 Source0:       https://github.com/ahaupt/lesspipe/archive/refs/tags/v%{packageversion}.tar.gz
 BuildArch:     noarch
 AutoReqProv:   on
 Packager:      Wolfgang Friebel <wp.friebel@gmail.com>
-URL:           https://github.com/wofr06/lesspipe.sh/
+URL:           https://github.com/wofr06/lesspipe/
 License:       GPL
 BuildRoot:     /var/tmp/%{packagename}-%{packageversion}
 BuildRequires: make perl
